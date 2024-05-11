@@ -1,6 +1,7 @@
 {
   "name": "x16joy",
   "version": "1.0.0",
-  "dependencies": {
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
