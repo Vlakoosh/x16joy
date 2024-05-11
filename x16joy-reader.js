@@ -76,3 +76,7 @@ let code = "instruction😂😂😂😂 😂😂😂😂 😂😂😂😂 😂�
 
 
 console.log(calculateCommandSum(code));
+
+
+//exporting
+module.exports = { calculateCommandSum, calculateCodeSums };
