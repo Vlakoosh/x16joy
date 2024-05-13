@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+canvas {
+    background-color: burlywood;
+    width: 320px;
+    height: 320px;
+    margin: 100px;
+}
+
+#inputContainer, #outputContainer {
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 400px;
+    border: solid black 2px;
+}
+
+#mainContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
