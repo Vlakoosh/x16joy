@@ -25,57 +25,34 @@ function calculateCodeSums(code){
     return instructionSums
 }
 
-function calculateCommandSum(codeLine){
+function calculateCommandSum(codeInput){
     let sum = 0;
-    let values = [0];
-    let currentValue = 0;
-    let currentOperation = "";
-    let space = 0;
+    let codeLine = codeInput
+    codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂😂😂😂", '10');
+    codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂😂😂", '9');
+    codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂😂", '8');
+    codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂", '7');
+    codeLine = codeLine.replaceAll("😂😂😂😂😂😂", '6');
+    codeLine = codeLine.replaceAll("😂😂😂😂😂", '5');
+    codeLine = codeLine.replaceAll("😂😂😂😂", '4');
+    codeLine = codeLine.replaceAll("😂😂😂", '3');
+    codeLine = codeLine.replaceAll("😂😂", '2');
+    codeLine = codeLine.replaceAll("😂", '1');
+    codeLine = codeLine.replace(/     /g, '\n');
+    codeLine = codeLine.replace(/   /g, '+');
+    codeLine = codeLine.replace(/ /g, '*');
+    codeLine = codeLine.replaceAll(/[a-zA-Z]/g, '');
+    console.log(codeLine);
 
-    for (let i = 0; i < codeLine.length; i++) {
-        if (codeLine.at(i) + codeLine.at(i+1) === "😂" && space === 0){
-            values[currentValue]++;
-        }
-        else if (codeLine.at(i) + codeLine.at(i+1) === "😂" && space === 1){
-            currentOperation = "multiply";
-            values.push(0);
-            currentValue++
-            values[currentValue]++;
-            space = 0;
-        }
-        else if (codeLine.at(i) + codeLine.at(i+1) === "😂" && space === 3){
-            currentOperation = "add";
-            values.push(0);
-            values.push(0);
-            currentValue+=2;
-            values[currentValue]++;
-            space = 0;
-        }
-        else if (codeLine.at(i) === " " && space === 0){
-            doOperation(currentOperation, values, currentValue);
-            space++;
-        }
-        else if (codeLine.at(i) === " " && space > 0){
-            space++;
-            if (space === 3){
-                currentOperation = "add";
-            }
-        }
-    }
-
-    doOperation();
-
-    values.forEach(value => {
-        sum += value;
-    })
+    sum = eval(codeLine)
 
     return sum;
 }
 
-let code = "instruction😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂   😂😂😂😂";
+let code = "😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂   😂😂😂😂";
+let code2 = "😂😂😂😂😂😂😂😂   😂😂😂😂 😂😂😂😂";
 
-
-console.log(calculateCommandSum(code));
+console.log(calculateCommandSum(code2));
 
 
 //exporting
