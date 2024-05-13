@@ -16,6 +16,7 @@ function doOperation(operation, values, currentValue){
 }
 
 function calculateCodeSums(code){
+    code = code.replace(/     /g, '\n');
     let instructions = code.split("\n");
     let instructionSums = [];
     for (let i = 0; i < instructions.length; i++){
