@@ -5,13 +5,15 @@
 
 * {
     box-sizing: border-box;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
 }
-/*
+
+
 body {
     background-color: #14161A;
 }
-*/
-
 
 canvas {
     image-rendering: pixelated;
