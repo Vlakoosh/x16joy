@@ -31,6 +31,9 @@ function convertNumberToJoyCode(number) {
         exponent--;
     }
 
+    output= output.replaceAll("😂😂 😂😂", '😂😂😂😂');
+    console.log(output);
+
     return output;
 }
 
