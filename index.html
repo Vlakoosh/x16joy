@@ -4,26 +4,31 @@
     <meta charset="UTF-8">
     <title>x16joy emulator</title>
     <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="mainContainer">
-    <canvas id="canvas"></canvas>
+    <div id="canvasContainer">
+        <label for="canvas">16x16 Canvas:</label>
+        <canvas id="canvas"></canvas>
+    </div>
+
 
     <div id="textAreasContainer">
         <div id="inputContainer">
             <label for="codeInput">Source Code:</label>
-            <textarea id="codeInput" name="codeInput" rows="20" cols="50">
+            <textarea id="codeInput" name="codeInput" rows="20" cols="50" class="textarea">
         </textarea>
         </div>
         <div id="outputContainer">
             <label for="codeOutput">Code Output:</label>
-            <textarea id="codeOutput" name="codeOutput" rows="20" cols="50">
+            <textarea id="codeOutput" name="codeOutput" rows="20" cols="50" class="textarea" readonly>
         </textarea>
         </div>
     </div>
 </div>
 
 
-<script src="app.js"></script>
+<script src="./app.js"></script>
 </body>
 </html>
