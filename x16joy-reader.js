@@ -25,9 +25,12 @@ function calculateCodeSums(code){
     return instructionSums
 }
 
-function calculateCommandSum(codeInput){
-    let sum = 0;
-    let codeLine = codeInput
+function calculateCommandSum(codeLine){
+    //remove comments
+    codeLine = codeLine.replace(/😐([^😐]*)😐/g, '');
+    //convert emojis and spaces to signs and numbers
+
+    //TODO: shorten this with a for loop
     codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂😂😂😂", '10');
     codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂😂😂", '9');
     codeLine = codeLine.replaceAll("😂😂😂😂😂😂😂😂", '8');
@@ -41,18 +44,16 @@ function calculateCommandSum(codeInput){
     codeLine = codeLine.replace(/     /g, '\n');
     codeLine = codeLine.replace(/   /g, '+');
     codeLine = codeLine.replace(/ /g, '*');
-    codeLine = codeLine.replaceAll(/[a-zA-Z]/g, '');
-    console.log(codeLine);
 
     sum = eval(codeLine)
 
     return sum;
 }
 
-let code = "😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂   😂😂😂😂";
-let code2 = "😂😂😂😂😂😂😂😂   😂😂😂😂 😂😂😂😂";
+let code = "😐instruction😐😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😐value😐😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂   😐register number😐😂😂😂😂";
+let code2 = "😐aasdasda12 sd😐😂😂😂😂😂😂😂😂   😐as 122dasda😐😂😂😂😂 😂😂😂😂😐sada sd😐";
 
-console.log(calculateCommandSum(code2));
+console.log(calculateCommandSum(code));
 
 
 //exporting
