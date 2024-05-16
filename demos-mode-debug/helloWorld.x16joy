@@ -1,0 +1,24 @@
+sv_ r00 072
+sv_ r01 101
+sv_ r02 108
+sv_ r03 111
+
+sv_ r09 032
+
+sv_ r04 87
+sv_ r05 114
+sv_ r06 100
+sv_ r07 010
+
+prc r00
+prc r01
+prc r02
+prc r02
+prc r03
+prc r09
+prc r04
+prc r03
+prc r05
+prc r02
+prc r06
+prc r07

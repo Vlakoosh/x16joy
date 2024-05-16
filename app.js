@@ -167,9 +167,9 @@ function runCommand(instruction){
     if (instruction.startsWith("0101")){
         let clearImage = ctx.createImageData(1, 1);
         let clearData = clearImage.data;
-        clearData[0] = 20;
-        clearData[1] = 22;
-        clearData[2] = 26;
+        clearData[0] = 255;
+        clearData[1] = 255;
+        clearData[2] = 255;
         clearData[3] = 255;
         for (let x = 0; x < CANVAS_WIDTH; x++){
             for (let y = 0; y < CANVAS_HEIGHT; y++) {
@@ -205,6 +205,13 @@ function runCommand(instruction){
     }
 
     //prc
+    if (instruction.startsWith("10010000000")) {
+        let reg = parseInt(instruction.substring(12), 2);
+
+        output.textContent = output.value + String.fromCharCode(registers[reg]);
+        console.log(String.fromCharCode(registers[reg]));
+    }
+
     //prv - print value
     if (instruction.startsWith("1011000")) {
         let num_sys = parseInt(instruction.substring(7,12), 2);
@@ -367,6 +374,10 @@ function codeToBinaryString(instruction){
 
         return result;
     }
+    if (instruction.toLowerCase().startsWith("co_")){
+        result += "0101000000000000";
+        return result;
+    }
     if (instruction.toLowerCase().startsWith("prv")){
         result += "1011000";
         let num_sys = parseInt(instruction.substring(8)).toString(2);
@@ -400,6 +411,16 @@ function codeToBinaryString(instruction){
             reg3 = "0" + reg3;
         }
         result += reg3; //coordinates
+
+        return result;
+    }
+    if (instruction.toLowerCase().startsWith("prc")){
+        result += "100100000000";
+        let reg = parseInt(instruction.substring(5,7)).toString(2);
+        while (reg.length < 4){
+            reg = "0" + reg;
+        }
+        result += reg;
 
         return result;
     }
