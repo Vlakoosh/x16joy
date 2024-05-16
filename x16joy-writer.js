@@ -32,11 +32,15 @@ function convertNumberToJoyCode(number) {
     }
 
     output= output.replaceAll("😂😂 😂😂", '😂😂😂😂');
-    console.log(output);
 
     return output;
 }
 
+function convertBinaryToJoyCode(binaryString){
+    let number = parseInt(binaryString, 2);
+    return convertNumberToJoyCode(number);
+}
 
+console.log(convertBinaryToJoyCode(8177))
 //exporting
 module.exports = { convertNumberToJoyCode };

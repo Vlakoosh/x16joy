@@ -1,0 +1,27 @@
+//pixel color data
+//red, green, blue, alpha
+sv_ r00 200
+sv_ r01 050
+sv_ r02 50
+sv_ r03 255
+
+//value for shifting bits by 8
+sv_ r08 008
+
+//load the color data into 2 registers
+lsl r00 r08
+add r00 r01
+lsl r02 r08
+add r02 r03
+
+//coordinates of the pixel 
+//x, y
+sv_ r09 08
+sv_ r10 012
+
+//load coordinates into 1 register
+lsl r09 r08
+add r09 r10
+
+//draw pixel with data = rg ba xy
+dpc r00 r02 r09

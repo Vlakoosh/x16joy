@@ -27,6 +27,7 @@ function calculateCodeSums(code){
 }
 
 function calculateCommandSum(codeLine){
+    codeLine = codeLine.trim();
     //remove comments
     codeLine = codeLine.replace(/😐([^😐]*)😐/g, '');
     //convert emojis and spaces to signs and numbers
@@ -50,6 +51,12 @@ function calculateCommandSum(codeLine){
 
     return sum;
 }
+
+function parseBinaryStringToInt(string) {
+    return string
+}
+
+
 
 let code = "😐instruction😐😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😐value😐😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂 😂😂😂😂   😂😂😂😂 😂😂😂😂 😂😂   😂😂😂😂 😂😂😂😂   😐register number😐😂😂😂😂";
 let code2 = "😐aasdasda12 sd😐😂😂😂😂😂😂😂😂   😐as 122dasda😐😂😂😂😂 😂😂😂😂😐sada sd😐";
