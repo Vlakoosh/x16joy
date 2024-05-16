@@ -1,0 +1,1234 @@
+//mario colors:
+//mario red -  rgb(248,55,0)
+//mario brown - rgb(175,127,2)
+//mario yellow - rgb(255,163,70)
+
+//pixel color data
+//red, green, blue, alpha
+sv_ r00 248
+sv_ r01 055
+sv_ r02 000
+sv_ r03 255
+
+//value for shifting bits by 8
+sv_ r08 008
+
+//load the color data into 2 registers
+lsl r00 r08
+add r00 r01
+lsl r02 r08
+add r02 r03
+//x, y
+sv_ r09 005
+sv_ r10 000
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 000
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 000
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 000
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 000
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 001
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 007
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+
+//x, y
+sv_ r09 007
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+
+//x, y
+sv_ r09 010
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+
+//x, y
+sv_ r09 010
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+
+//x, y
+sv_ r09 010
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0011
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0011
+sv_ r10 013
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 013
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0010
+sv_ r10 013
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 013
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0009
+sv_ r10 013
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 013
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+
+///////////////////////////////////////////////
+
+//pixel color data
+//red, green, blue, alpha
+sv_ r00 175
+sv_ r01 127
+sv_ r02 002
+sv_ r03 255
+
+//load the color data into 2 registers
+lsl r00 r08
+add r00 r01
+lsl r02 r08
+add r02 r03
+
+//draw
+
+//x, y
+sv_ r09 004
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+///////////////////
+//x, y
+sv_ r09 004
+sv_ r10 007
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 007
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 007
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 007
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 007
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0010
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0011
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0012
+sv_ r10 008
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0010
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0011
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0012
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 0013
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 002
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 009
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 014
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 014
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 014
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 014
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 014
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 014
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 013
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 002
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 015
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+
+//mario yellow - rgb(255,163,70)
+
+//pixel color data
+//red, green, blue, alpha
+sv_ r00 255
+sv_ r01 164
+sv_ r02 070
+sv_ r03 255
+
+//value for shifting bits by 8
+sv_ r08 008
+
+//load the color data into 2 registers
+lsl r00 r08
+add r00 r01
+lsl r02 r08
+add r02 r03
+
+//x, y
+sv_ r09 004
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 007
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 008
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 010
+sv_ r10 002
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 013
+sv_ r10 004
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 003
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 005
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 005
+sv_ r10 006
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 006
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 009
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 013
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 013
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 012
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 013
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 011
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 004
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 002
+sv_ r10 011
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 002
+sv_ r10 010
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 002
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09
+//x, y
+sv_ r09 003
+sv_ r10 012
+
+lsl r09 r08
+add r09 r10
+
+dpc r00 r02 r09

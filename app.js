@@ -2,7 +2,7 @@ const input = document.getElementById("codeInput");
 const output = document.getElementById("codeOutput");
 const canvas = document.getElementById("canvas");
 
-
+let joyCodePrint = "";
 const CANVAS_WIDTH = 16;
 const CANVAS_HEIGHT = 16;
 
@@ -60,12 +60,14 @@ function runCode(instructions){
         if(mode === "sad") instructionBinary = codeToBinaryString(instructions[i]);
         runCommand(instructionBinary);
     }
+    console.log(joyCodePrint);
 }
 
 function runCommand(instruction){
 
 
     if (instruction===undefined) return;
+    joyCodePrint = joyCodePrint + convertBinaryToJoyCode(instruction) + "\n";
     console.log(instruction);
     console.log(convertBinaryToJoyCode(instruction));
     // sv_ instruction
